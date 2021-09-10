@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>AdGuardHome</Name>
+  <Repository>adguard/adguardhome</Repository>
+  <Registry/>
+  <Network>br0</Network>
+  <MyIP>192.168.200.234</MyIP>
+  <Shell>sh</Shell>
+  <Privileged>true</Privileged>
+  <Support/>
+  <Project/>
+  <Overview/>
+  <Category/>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon/>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1631235876</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description/>
+  <Networking>
+    <Mode>br0</Mode>
+    <Publish>
+      <Port>
+        <HostPort>3000</HostPort>
+        <ContainerPort>3000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>53</HostPort>
+        <ContainerPort>53</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>53</HostPort>
+        <ContainerPort>53</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/AdGuardHome/conf</HostDir>
+      <ContainerDir>/opt/adguardhome/conf</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/AdGuardHome/work</HostDir>
+      <ContainerDir>/opt/adguardhome/work</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="Host Port 2" Target="3000" Default="" Mode="tcp" Description="&#x5BB9;&#x5668; Port: 3000" Type="Port" Display="always" Required="false" Mask="false">3000</Config>
+  <Config Name="Host Path 1" Target="/opt/adguardhome/conf" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /opt/adguardhome/conf" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/AdGuardHome/conf</Config>
+  <Config Name="Host Path 2" Target="/opt/adguardhome/work" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /opt/adguardhome/work" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/AdGuardHome/work</Config>
+  <Config Name="Host Port 2" Target="53" Default="" Mode="tcp" Description="&#x5BB9;&#x5668; Port: 53" Type="Port" Display="always" Required="false" Mask="false">53</Config>
+  <Config Name="Host Port 3" Target="53" Default="" Mode="udp" Description="&#x5BB9;&#x5668; Port: 53" Type="Port" Display="always" Required="false" Mask="false">53</Config>
+</Container>
